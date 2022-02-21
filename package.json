@@ -8,8 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "ng build --aot --production"
   },
   "private": true,
   "dependencies": {

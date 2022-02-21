@@ -1,0 +1,16 @@
+language: node__js
+node_js:
+  - "10"
+
+before_install: -npm install -g @angular/cli
+install: npm install
+
+branches:
+  only:
+    - master
+
+  deploy:
+    provider: heroku
+    app: SteamClone
+    api_key:
+      secure: 62a14ddc-7e99-4a8f-9a51-274e223619e4

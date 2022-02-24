@@ -1,0 +1,41 @@
+<div class="friends">
+  <h2 class="friends__title">Friends</h2>
+  <label for="name" class="friends__subtitle" ngModel name
+    ><b>Search Friends</b></label
+  >
+  <div class="friens__serch-wrapper">
+    <input
+      [(ngModel)]="user.name"
+      [ngModelOptions]="{ standalone: true }"
+      type="text"
+      class="friends__search-input"
+      placeholder="Search friends"
+      id="name"
+      name="name"
+      #name
+      required
+    />
+    <button class="btn btn_search" (click)="showUsers(name.value)">
+      Search
+    </button>
+  </div>
+  <div class="search-friends" *ngIf="user.name">
+    <h2 class="friends__title">Search Friends: {{ user.name }}</h2>
+    <div class="friends__item item" *ngFor="let user of people; let i = index">
+      <p class="item__name">{{ user.username }}</p>
+      <button class="btn btn_add" (click)="addFriend(user)">Add Friend</button>
+    </div>
+  </div>
+  <div class="my-friends" *ngIf="name.value.length == 0">
+    <h2 class="friends__title">My friends</h2>
+    <div
+      class="friends__item item"
+      *ngFor="let friend of friends; let i = index"
+    >
+      <p class="item__name">{{ friend.username }}</p>
+      <button class="btn btn_remove" (click)="removeFriend(friend)">
+        Remove Friend
+      </button>
+    </div>
+  </div>
+</div>

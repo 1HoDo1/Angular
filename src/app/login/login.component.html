@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="wrapper" *ngIf="!isLogin">
+  <h1 class="title">Sign In</h1>
+  <form action="" class="login__form" #loginForm>
+    <label for="email" class="login__title"><b>Email</b></label>
+    <input
+      type="email"
+      placeholder="Email"
+      id="email"
+      class="login__input"
+      name="email"
+      #userEmail
+      required
+    />
+    <label for="password" class="login__title"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Password"
+      id="password"
+      class="login__input"
+      name="password"
+      #userPassword
+      required
+    />
+  </form>
+  <button
+    type="submit"
+    class="btn btn_sign-in"
+    (click)="login(userEmail, userPassword, loginForm)"
+  >
+    Sign In
+  </button>
+</div>

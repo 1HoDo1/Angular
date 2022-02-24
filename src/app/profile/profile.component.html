@@ -1,0 +1,53 @@
+<div class="wrapper" *ngIf="user != 0">
+  <h1 class="title">Profile</h1>
+  <form action="" class="profile__form" #profileForm>
+    <label for="username" class="profile__title" ngModel username
+      ><b>Username</b></label
+    >
+    <input
+      [(ngModel)]="user.username"
+      [ngModelOptions]="{ standalone: true }"
+      type="text"
+      value="{{ user.username }}"
+      placeholder="{{ user.username }}"
+      id="username"
+      class="profile__input"
+      name="username"
+      #username
+      required
+    />
+    <label for="email" class="profile__title" ngModel email><b>Email</b></label>
+    <input
+      [(ngModel)]="user.email"
+      [ngModelOptions]="{ standalone: true }"
+      type="text"
+      placeholder="{{ user.email }}"
+      value="{{ user.email }}"
+      id="email"
+      class="profile__input"
+      name="email"
+      #userEmail
+      required
+    />
+    <label for="age" class="profile__title" ngModel age><b>age</b></label>
+    <input
+      [(ngModel)]="user.age"
+      [ngModelOptions]="{ standalone: true }"
+      type="number"
+      placeholder="{{ user.age }}"
+      value="{{ user.age }}"
+      id="age"
+      class="profile__input"
+      name="age"
+      #userAge
+      required
+    />
+  </form>
+  <button
+    type="submit"
+    class="btn btn_sign-in"
+    (click)="save(username.value, userEmail.value, userAge.value)"
+  >
+    Save
+  </button>
+</div>

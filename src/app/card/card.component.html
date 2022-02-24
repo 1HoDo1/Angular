@@ -1,0 +1,23 @@
+<div class="cards">
+  <div class="card" *ngFor="let card of cards; let i = index">
+    <div class="card__wrapper">
+      <div class="card__header">
+        <div class="card__title">
+          {{ card.title }}
+        </div>
+        <div class="card__price">{{ card.price }} UAH</div>
+      </div>
+      <div class="card__description">
+        <p class="card__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          error saepe ea iure id beatae possimus, eaque, voluptatum aperiam
+          provident commodi. Debitis quisquam molestiae vitae beatae sequi velit
+          sit suscipit.
+        </p>
+        <button class="btn btn__add" (click)="addGame(card)">
+          Add to Library
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

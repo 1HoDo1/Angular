@@ -1,0 +1,41 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  padding: 10px;
+  &__wrapper {
+    max-width: 280px;
+  }
+  &__header {
+    color: #ffffff;
+    background-color: #bdbcff;
+    padding: 8px;
+  }
+  &__title {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 78px;
+  }
+  &__description {
+    padding: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    margin: 0;
+    margin-bottom: 6px;
+  }
+  &__price {
+    font-size: 18px;
+    text-align: right;
+  }
+}
+.btn_add {
+  text-align: center;
+  width: 248px;
+  height: 32px;
+}

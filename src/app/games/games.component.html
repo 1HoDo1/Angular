@@ -1,0 +1,42 @@
+<h2 class="games__title">Games</h2>
+<p class="games__subtitle">Search games</p>
+<div class="friens__serch-wrapper">
+  <input type="text" class="games__search-input" placeholder="Search games" />
+  <button class="btn btn_search">Search</button>
+</div>
+
+<h2 class="games__title">Featured Games</h2>
+<div class="games__main-block">
+  <app-card></app-card>
+  <div class="games__filter filter">
+    <h3 class="filter__title">Filter by price</h3>
+    <input type="range" min="0" max="100" step="1" value="10" />
+    <h3 class="filer__title">Filter by tag</h3>
+    <p>
+      <label
+        ><input
+          class="form-check-input"
+          type="checkbox"
+          value="bench"
+          data-filter="bench"
+        />Indie</label
+      ><br />
+      <label
+        ><input
+          class="form-check-input"
+          type="checkbox"
+          value="table"
+          data-filter="table"
+        />Action</label
+      ><br />
+      <label
+        ><input
+          class="form-check-input"
+          type="checkbox"
+          value="sets"
+          data-filter="sets"
+        />Adventure</label
+      ><br />
+    </p>
+  </div>
+</div>

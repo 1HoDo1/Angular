@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/src/assets/Fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/src/assets/Fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+body {
+  background-color: #e5e5e5;
+  font-family: "Roboto Regular", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1220px;
+}
+.btn {
+  padding: 8px 16px;
+  width: 200px;
+  height: 32px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
+  background: #6c69ff;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &_search {
+    width: 75px;
+    height: 32px;
+  }
+  &_remove {
+    width: 125px;
+    height: 32px;
+    background-color: #ff6f6f;
+  }
+  &:hover {
+    background-color: darken(#6c69ff, 10%);
+  }
+}

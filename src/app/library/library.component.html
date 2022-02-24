@@ -1,0 +1,26 @@
+<h1 class="library__title">My Games</h1>
+<div class="library__wrapper"></div>
+<div class="cards">
+  <div class="card" *ngFor="let game of games; let i = index">
+    <div class="card__wrapper">
+      <div class="card__header">
+        <h4 class="card__title">
+          {{ game.title }}
+        </h4>
+      </div>
+      <div class="card__description">
+        <p class="card__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum natus
+          aliquid eum nobis dignissimos, vel quaerat quo labore iure non modi
+          nihil! Eaque, unde voluptates?
+        </p>
+        <div class="btn__wrapper">
+          <form method="get" action="/src/assets/MOCK_DATA.json">
+            <button type="submit" class="btn btn_add">Download</button>
+          </form>
+          <button class="btn btn_share">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
